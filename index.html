@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+		<title>PWAVES ENTERTAINMENT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+
+<!-- Your page content above -->
+
+<!-- Popup HTML -->
+<div id="videoModal" class="video-modal">
+  <span class="close">&times;</span>
+  <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- ✅ JavaScript goes HERE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".video-btn");
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+  const closeBtn = document.querySelector(".close");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      frame.src = this.getAttribute("data-video") + "?autoplay=1";
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+    frame.src = "";
+  };
+
+  window.onclick = function(e) {
+    if (e.target == modal) {
+      modal.style.display = "none";
+      frame.src = "";
+    }
+  };
+
+});
+
+
+
+
+
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+
+
+
+
+</script>
+
+	
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/PR.JPG" alt="" /></span>
+							<h1 id="title">PWAVES</h1>
+							<p>Filim Studio/creator</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<a href="https://www.instagram.com/ipranavprashanth" target="_blank" class="icon brands fa-instagram">
+            <span class="label">Instagram</span>
+        </a>
+						 <a href="https://www.facebook.com/Pranav Prashanth" target="_blank" class="icon brands fa-facebook-f">
+            <span class="label">Facebook</span>
+        </a></li>
+							<a href="https://github.com/PranavPrasanth" target="_blank" class="icon brands fa-github">
+            <span class="label">GitHub</span>
+        </a></li>
+							
+							
+        <a href="mailto:iampranavvv@gmail.com" class="icon solid fa-envelope">
+            <span class="label">Email</span>
+        </a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover"
+					 style="background: url('images/pw.jpg') center/cover no-repeat;">
+					</section>
+						<div class="container">
+
+							<header>
+								<h2 class="alt">
+									
+							</header>
+
+					<!-- 		<footer>
+								<a href="#portfolio" class="button scrolly">MORE</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+    <div class="container">
+
+        <header>
+            <h2 class="section-title">Portfolio</h2>
+        </header>
+
+        <p class="portfolio-text">
+            <strong>PWAVES</strong> is a dynamic film production company dedicated to crafting powerful cinematic experiences. 
+            We specialize in creating visually stunning films, engaging music videos, and impactful advertisements that connect with audiences and leave a lasting impression.
+        </p>
+
+        <p class="portfolio-text highlight">
+            Driven by creativity and innovation, we transform ideas into compelling visual stories.
+        </p>
+
+    </div>
+</section>
+								 <div class="grid">
+  <div>🎬 Film Production</div>
+  <div>🎵 Music Videos</div>
+  <div>📺 Advertisement </div>
+  <div>🎞️ Brand Videos</div>
+  <div>🎨 Creative Direction</div>
+  <div>✂️ Post Production</div>
+</div>
+<div style="margin-bottom: 50px;"></div>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+
+
+										<a href="#" class="image fit video-btn" data-video="https://www.youtube.com/embed/-mdn3oECRVM?si=h0feMKdQreS03oiT">
+  <img src="images/FB.jpeg" alt="" />
+</a>
+										
+										<header>
+											<h3>WATCH NOW</h3>
+										</header>
+									</article>
+
+
+
+									<article class="item">
+										
+									<a href="#" class="image fit video-btn" data-video="https://www.youtube.com/embed/S_YFGUkV2FE?si=S4zMda7WCYJpICIO">
+  <img src="images/DF.JPEG" alt="" />
+</a>
+
+										<header>
+											<h3>WATCH NOW</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit" onclick="openPopup()"><img src="images/travel.jpg" alt="" /></a>
+										<header>
+											<h3>comming soon</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit" onclick="openPopup()"><img src="images/time.jpg" alt="" /></a>
+										<header>
+											<h3>Comming Soon</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit" onclick="openPopup()"><img src="images/feelgoof.jpg" alt="" /></a>
+										<header>
+											<h3>Comming Soon</h3>
+										</header>
+									</article>
+									
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+
+					<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>COMING SOON</h2>
+        <p>Something cinematic is on the way </p>
+    </div>
+</div>
+
+				<!-- About Me -->
+				<!----	<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pv.jpg" alt="" /></a>
+
+							<p>**Pranav Prashanth – Director Intro**
+
+From the heart of Kannur, Kerala, rises a new voice in cinema — Pranav Prashanth. An Indian AI film director with a vision beyond the present, he doesn’t just tell stories… he engineers them.
+
+Where imagination meets intelligence, Pranav brings machines and emotion onto the same screen, redefining what filmmaking can be. For him, AI isn’t a tool — it’s a new language of cinema.
+
+Directed by Dr. D and Dr. F, the film stands as the spark that ignited his journey — a powerful influence that shaped his path into AI-driven storytelling.
+
+This is not just passion.
+This is a movement.
+A movement to break boundaries, to challenge tradition, and to lead cinema into the future.
+
+Pranav Prashanth isn’t following the evolution of film —
+He’s creating it.
+</p>
+
+						</div>
+					</section>
+
+<!-- About Me - Netflix Style -->
+<section id="about" class="netflix-about">
+    <div class="overlay"></div>
+
+    <img src="images/pv.jpg" alt="Pranav Prashanth" class="bg-image">
+
+    <div class="content">
+        <h1 class="title">PRANAV PRASHANTH</h1>
+        <h3 class="subtitle">AI FILM DIRECTOR</h3>
+
+        <p class="tagline">
+            From Kannur, Kerala — a new voice in cinema rises.
+        </p>
+
+        <p class="description">
+            He doesn’t just tell stories… he engineers them.  
+            Where imagination meets intelligence, AI becomes a new language of cinema.
+        </p>
+
+        <p class="description">
+            Inspired by visionary direction, this journey began with a spark — 
+            evolving into a mission to redefine storytelling through technology.
+        </p>
+
+        <div class="highlight">
+            <p>This is not just passion.</p>
+            <p class="bold">THIS IS A MOVEMENT.</p>
+        </div>
+
+        <p class="final">
+            He’s not following cinema — <span>he’s creating it.</span>
+        </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+				<!-- Contact -->
+			<!----		<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>.</p>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+		-->
+
+<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>.</p>
+
+
+  <form method="POST" action="https://formspree.io/f/xdaywpvp">
+    <div class="row">
+        <div class="col-6 col-12-mobile">
+            <input type="text" name="name" placeholder="Name" required />
+        </div>
+
+        <div class="col-6 col-12-mobile">
+            <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="col-12">
+            <textarea name="message" placeholder="Message" required></textarea>
+        </div>
+
+        <div class="col-12">
+            <button type="submit">Send Message</button>
+        </div>
+    </div>
+</form>
+<div style="height: 80px;"></div>
+
+
+<!-- Footer -->
+<div id="footer" class="netflix-footer">
+
+    <div class="footer-content">
+        <h3 class="footer-name">Pranav Prashanth</h3>
+        <p class="footer-tagline">AI Film Director | Redefining Cinema with Intelligence</p>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/ipranavprashanth" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@PRANWAVES" target="_blank">YouTube</a>
+            <a href="https://www.linkedin.com/in/pranav-prashanth-ba1a321bb/" target="_blank">LinkedIn</a>
+        </div>
+
+        <p class="footer-line">Crafting the future of storytelling with AI</p>
+
+        <ul class="copyright">
+            <li>&copy; 2026 Pranav Prashanth. All rights reserved.</li>
+        </ul>
+    </div>
+
+</div>
+
+
+		
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
